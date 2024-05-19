@@ -1,17 +1,21 @@
 <?php
 require "functions.php";
-
-$uri = parse_url($_SERVER["REQUEST_URI"])["path"];
-
-
-$routes=[
-    "/" => "controlers/Index.php",
-    "/about" => "controlers/about.php",
-    "/contact" => "controlers/contact.php"
-];
+require "Database.php";
+require "Response.php";
+ require "router.php";
 
 
-if(array_key_exists($uri,$routes))
-{
-    require $routes[$uri];
-}
+
+
+// $id=$_GET['id'];
+
+// $quer="select * from users where id = :id";
+
+// $result=$dp->query($quer,['id'=>$id])->fetchAll();
+// // dd($result);
+
+
+
+// // foreach($result as $post){
+// //     echo "<li>{$post[1]} the adminstration is : {$post[2]}</li>";
+// // }
