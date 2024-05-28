@@ -1,10 +1,22 @@
 <?php
 
-return [
-    "/" => "controlers/Index.php",
-    "/about" => "controlers/about.php",
-    "/contact" => "controlers/contact.php",
-    "/note" =>"controlers/note.php",
-    "/note/create"=>"controlers/create-note.php",
-    "/notes" => "controlers/notes.php"
-];
+
+
+$router ->get('/',"controlers/Home.php");
+$router ->get("/about","controlers/about.php");
+$router ->get("/contact","controlers/contact.php");
+
+// $router ->get("/note","controlers/note/destroy.php");
+$router ->delete("/note","controlers/note/destroy.php");
+
+$router ->get("/note/create","controlers/note/create-note.php");
+$router ->post("/note/create","controlers/note/create-note.php");
+
+$router ->get("/notes", "controlers/note/notes.php");
+$router ->post("/store", "controlers/note/store.php");
+
+$router ->get("/show", "controlers/note/show.php");
+
+
+
+// $router ->delete("/note","controlers/note/create-note.php");

@@ -1,7 +1,7 @@
 <?php
 
-$name_Banner="Contact as";
 
-require "Views/contact.view.php";
 
- 
+view("contact.view.php",[
+    "name_Banner" => "Contact as"
+]);
